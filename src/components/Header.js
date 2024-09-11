@@ -17,6 +17,7 @@ const Header = () => {
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
+        console.log("")
         navigate('/');
       })
       .catch((error) => {
@@ -51,7 +52,7 @@ const Header = () => {
   }
 
   return (
-    <div className='absolute px-8 py-2 z-10 w-full bg-gradient-to-b from-black flex justify-between'>
+    <div className='absolute px-8 py-2 z-20 w-full bg-gradient-to-b from-black flex justify-between'>
       <img className='w-40 mt-2 ml-4' alt='logo' src={LOGO} />
       {userExists && (
         <div className='p-2 mt-3 mr-12 flex'>
